@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json Assignment</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("https://w0.peakpx.com/wallpaper/972/48/HD-wallpaper-stack-of-books-blue-background-education-concepts-books-library-school-learning-concepts.jpg");
+            background-size: cover;
+        }
+        .container{
+            width: 40vw;
+            height: 280px;
+            border-radius: 10px;
+            margin-top: 10rem ;
+            margin-left: 10rem;
+            box-shadow: 10px 10px 10px rgb(187, 88, 88);
+            background-color: rgb(226, 123, 138);
+            }
+            .box_json{
+              text-align: center;
+            }
+            h1{
+                padding: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            #json{
+                font-size: 20px;
+                line-height: 1.5em;
+            }
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="box_json">
+    <h1>JSON Example</h1>
+    <div id="json"></div>
+  </div>
+</div>
+    <script>
+        const myJson=`{
+            "schooName":"Yadav School",
+             "year": 1981,
+             "rank In City":1,
+            "no.of Students Studying":2000}`//json text
+const myObject=JSON.parse(myJson);
+
+let value=" ";//tihs variable store all data myobjest
+for(let abc in myObject) { //Use for in loop 
+    value += abc+ " = " +myObject[abc]+"<br>"
+};
+    document.getElementById("json").innerHTML=value;
+    </script>
+</body>
+</html>
